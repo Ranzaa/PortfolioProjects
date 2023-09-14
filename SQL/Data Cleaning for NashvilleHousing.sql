@@ -120,7 +120,7 @@ Select *,
 					UniqueID
 					) row_num
 FROM PortfolioProjects.dbo.NashvilleHousing
---ORDER BY ParcelID
+ORDER BY ParcelID
 )
 SELECT *
 FROM RowNumCTE
