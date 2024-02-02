@@ -1,0 +1,25 @@
+This Bike Sales Dashboard is an Excel-based tool designed to analyze and visualize bike sales data. This dynamic dashboard goes beyond traditional
+metrics, diving deep into demographic factors such as age, income, marital status, education, and regional influences to deliver a holistic
+understanding of customer behavior.
+
+Features
+
+Interactive Dashboard: Navigate through various sections of the dashboard to explore different aspects of bike sales data.
+
+Average Income per Purchase: Understand the average income of customers per purchase, providing insights into pricing strategies.
+
+Customer Commute: Analyze data related to customer commuting patterns, helping tailor marketing strategies.
+
+Customer Age Brackets: Categorize customers into age brackets to identify target demographics and preferences.
+
+Marital Status: Explore how marital status influences purchasing decisions and customer preferences.
+
+Region: Analyze sales data based on regions to identify geographical trends and optimize distribution strategies.
+
+Education: Understand the educational background of customers and its impact on product preferences.
+
+Trend Analysis: Analyze sales trends over time to identify patterns and make informed forecasting decisions.
+
+Product Performance: Explore the performance of individual bike models and categories.
+
+Customer Segmentation: Understand the customer base by analyzing sales data based on demographics and location.
