@@ -1,0 +1,19 @@
+Overview:
+The Data Professional Survey Breakdown dashboard is a dynamic visualization tool created with Power BI to analyze and present insights from a survey 
+conducted among data professionals. This interactive dashboard provides a comprehensive breakdown of survey responses, offering detailed insights into the 
+demographic makeup, job satisfaction, skills, and challenges faced by the data professional community.
+
+Features:
+Demographic Breakdown: Analyze survey responses based on demographics such as job role, industry, and experience level, including a breakdown by country.
+
+Salary Analysis: Investigate the average salary by job title, providing valuable insights into the compensation landscape for data professionals.
+
+Work/Life Balance: Assess job satisfaction levels related to work/life balance among survey participants.
+
+Programming Language Preferences: Identify the favorite programming languages among data professionals, aiding in skill development recommendations.
+
+Difficulty to Break into Data: Understand the perceived difficulty of breaking into the field of data, providing insights into entry barriers.
+
+Salary Satisfaction: Gauge participant happiness with their current salary, offering perspectives on compensation satisfaction.
+
+Survey Participation Overview: Access the total count of survey takers and the average age of participants for a view of the survey population.
