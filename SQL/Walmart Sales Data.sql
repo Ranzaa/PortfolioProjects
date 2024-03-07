@@ -1,21 +1,18 @@
 SELECT * 
-FROM  WalmartSalesData
+FROM  Sales
 
 
 -- Add the time_of_day column
-ALTER TABLE sales ADD COLUMN time_of_day VARCHAR(20);
+ALTER TABLE Sales ADD COLUMN time_of_day VARCHAR(20);
 
-UPDATE WalmartSalesData
+UPDATE Sales
 SET time_of_day = (
 	CASE
-		WHEN time BETWEEN "00:00:00" AND "12:00:00" THEN "Morning"
+	WHEN time BETWEEN "00:00:00" AND "12:00:00" THEN "Morning"
         WHEN time BETWEEN "12:01:00" AND "16:00:00" THEN "Afternoon"
         ELSE "Evening"
     END
 );
-
-SELECT * 
-FROM WalmartSalesData AS Sales
 
 -- Add day_name column
 ALTER TABLE Sales ADD COLUMN day_name VARCHAR(10);
@@ -111,7 +108,7 @@ SELECT
 FROM Sales
 GROUP BY product_line
 
--- Which branch sold more products than average product sold?
+-- Which branch sold more products than the average product sold?
 SELECT 
     branch, 
     SUM(quantity) AS total_quantity
@@ -120,15 +117,28 @@ GROUP BY branch
 HAVING total_quantity > (SELECT AVG(quantity) FROM sales)
 
 -- What is the most common product line by gender?
+-- Top product line for men
 SELECT
     gender,
     product_line,
     COUNT(*) AS total_count
 FROM Sales
+WHERE gender = 'Male'
 GROUP BY gender, product_line
 ORDER BY total_count DESC
 LIMIT 1
 
+-- Top product line for women
+SELECT
+    gender,
+    product_line,
+    COUNT(*) AS total_count
+FROM Sales
+WHERE gender = 'Female'
+GROUP BY gender, product_line
+ORDER BY total_count DESC
+LIMIT 1
+	
 -- What is the average rating of each product line?
 SELECT
     ROUND(AVG(rating), 2) as avg_rating,
@@ -237,22 +247,4 @@ SELECT
 FROM Sales
 GROUP BY customer_type
 ORDER BY total_revenue DESC
-LIMIT 1
-
--- Which city has the largest tax/VAT percent?
-SELECT
-    city,
-    ROUND(AVG(tax_pct), 2) AS avg_tax_pct
-FROM Sales
-GROUP BY city 
-ORDER BY avg_tax_pct DESC
-LIMIT 1
-
--- Which customer type pays the most in VAT?
-SELECT
-    customer_type,
-    AVG(tax_pct) AS total_tax
-FROM Sales
-GROUP BY customer_type
-ORDER BY total_tax DESC
 LIMIT 1
